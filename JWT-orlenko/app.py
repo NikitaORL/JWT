@@ -7,7 +7,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-SALAVOTI = "muuda-see-pikaks-juhuslikuks-saladuseks"
+SALAVOTI = os.environ.get("JWT_SECRET", "test-saladus-123")
 
 KASUTAJAD = {
     "mari": {"parool": "maasikas1", "id": "1024", "role": "student"},
